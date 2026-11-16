@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vénock | Design, marketing e tráfego pago em São Paulo</title>
+<meta name="description" content="A Vénock é uma agência de São Paulo para pequenos e médios negócios: identidade visual, social media, sites e tráfego pago, com aprovação sua em cada etapa e números abertos.">
+<meta name="theme-color" content="#070D1A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vénock | Design, marketing e tráfego pago">
+<meta property="og:description" content="Identidade visual, social media, sites e anúncios para negócios de São Paulo. Você aprova tudo e acompanha os números.">
+<meta property="og:image" content="img/og.png">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="img/icone.png">
+<link rel="apple-touch-icon" href="img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Vénock","description":"Agência de design, marketing digital e tráfego pago para pequenos e médios negócios.","areaServed":"São Paulo, SP","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"},"knowsAbout":["Identidade visual","Social media","Tráfego pago","Criação de sites","Marketing de conteúdo"]}
+</script>
+<style>
+:root{
+  --azul:#00418D;--azul2:#267EC5;--ceu:#6BB3EC;--noite:#070D1A;--noite2:#0B1424;--painel:#101B30;
+  --linha:rgba(255,255,255,.09);--txt:#E8EEF7;--mudo:#93A1B8;--cinza:#808080;--claro:#F4F7FB;--tinta:#0B1424;
+  --r:20px;--max:1160px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--noite);color:var(--txt);font:16px/1.65 Montserrat,system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:Syne,system-ui,sans-serif;line-height:1.08;letter-spacing:-.02em}
+h2{font-size:clamp(26px,3.3vw,42px);font-weight:800}
+h3{font-size:21px;font-weight:700}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+section{padding:104px 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ceu);margin-bottom:18px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--azul2)}
+.lead{color:var(--mudo);font-size:18px;max-width:640px;margin-top:18px}
+.grad{background:linear-gradient(100deg,#fff 10%,var(--ceu) 60%,var(--azul2));-webkit-background-clip:text;background-clip:text;color:transparent}
+:focus-visible{outline:3px solid var(--ceu);outline-offset:3px;border-radius:6px}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;font-size:15px;border:1px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;font-family:inherit}
+.btn.pri{background:linear-gradient(120deg,var(--azul),var(--azul2));color:#fff;box-shadow:0 10px 32px rgba(38,126,197,.35)}
+.btn.pri:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(38,126,197,.5)}
+.btn.sec{border-color:var(--linha);color:var(--txt);background:rgba(255,255,255,.03)}
+.btn.sec:hover{background:rgba(255,255,255,.08)}
+.btn svg{width:18px;height:18px}
+
+/* Navegação */
+header.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+header.nav.on{background:rgba(7,13,26,.82);backdrop-filter:blur(14px);border-color:var(--linha)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+.nav .logo img{height:30px;width:auto;max-width:none}
+.nav nav{display:flex;gap:30px;font-size:14px;font-weight:600;color:var(--mudo)}
+.nav nav a:hover{color:#fff}
+.nav .btn{padding:11px 20px;font-size:14px}
+#burger{display:none;background:none;border:1px solid var(--linha);border-radius:12px;width:44px;height:44px;color:#fff;cursor:pointer}
+
+/* Hero */
+.hero{min-height:100svh;display:flex;align-items:center;padding:140px 0 90px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(900px 520px at 78% 18%,rgba(38,126,197,.34),transparent 62%),
+  radial-gradient(700px 480px at 8% 92%,rgba(0,65,141,.5),transparent 60%);pointer-events:none}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--linha) 1px,transparent 1px),linear-gradient(90deg,var(--linha) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 75% 65% at 55% 40%,#000 25%,transparent 78%);-webkit-mask-image:radial-gradient(ellipse 75% 65% at 55% 40%,#000 25%,transparent 78%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative}
+.hero h1{font-size:clamp(32px,4.5vw,60px);font-weight:800}
+.hero .lead{font-size:19px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.selos{display:flex;gap:10px 22px;flex-wrap:wrap;margin-top:38px;color:var(--mudo);font-size:13.5px;font-weight:500}
+.selos span{display:flex;align-items:center;gap:8px}
+.selos i{width:7px;height:7px;border-radius:50%;background:var(--ceu);box-shadow:0 0 12px var(--ceu)}
+
+/* Arte do hero */
+.arte{position:relative;aspect-ratio:1;max-width:480px;margin-left:auto;width:100%}
+.anel{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(107,179,236,.28);animation:gira 46s linear infinite}
+.anel.b{inset:11%;border-style:dashed;border-color:rgba(255,255,255,.16);animation-duration:70s;animation-direction:reverse}
+.anel::after{content:"";position:absolute;top:-6px;left:50%;width:12px;height:12px;border-radius:50%;background:var(--ceu);box-shadow:0 0 22px var(--ceu)}
+.anel.b::after{background:#fff;width:8px;height:8px;top:-4px;box-shadow:0 0 14px #fff}
+.nucleo{position:absolute;inset:23%;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 30% 25%,rgba(38,126,197,.55),rgba(0,65,141,.25) 55%,rgba(7,13,26,.1));border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 90px rgba(0,65,141,.6),inset 0 0 60px rgba(107,179,236,.18)}
+.nucleo img{width:62%;filter:drop-shadow(0 10px 26px rgba(0,0,0,.45));animation:flutua 7s ease-in-out infinite}
+.chip{position:absolute;background:rgba(16,27,48,.86);backdrop-filter:blur(10px);border:1px solid var(--linha);border-radius:14px;padding:11px 15px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:9px;box-shadow:0 14px 40px rgba(0,0,0,.4);animation:flutua 8s ease-in-out infinite}
+.chip b{width:9px;height:9px;border-radius:3px;background:var(--azul2)}
+.chip.c1{top:6%;left:-4%}.chip.c2{top:38%;right:-7%;animation-delay:-2.5s}.chip.c3{bottom:9%;left:4%;animation-delay:-5s}
+.chip.c2 b{background:var(--ceu)}.chip.c3 b{background:#fff}
+@keyframes gira{to{transform:rotate(360deg)}}
+@keyframes flutua{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+/* Faixa */
+.faixa{border-block:1px solid var(--linha);padding:20px 0;overflow:hidden;background:var(--noite2)}
+.faixa .trilho{display:flex;gap:46px;width:max-content;animation:corre 38s linear infinite;font:700 15px Syne,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--mudo);white-space:nowrap}
+.faixa .trilho span::after{content:"✦";margin-left:46px;color:var(--azul2)}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+/* Serviços */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:54px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--linha);border-radius:var(--r);padding:30px 28px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(38,126,197,.22),transparent 60%);opacity:0;transition:opacity .3s}
+.card:hover{transform:translateY(-5px);border-color:rgba(107,179,236,.4)}
+.card:hover::before{opacity:1}
+.card>*{position:relative}
+.ico{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--azul),var(--azul2));margin-bottom:22px}
+.ico svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card p{color:var(--mudo);font-size:15px;margin-top:10px}
+.card ul{list-style:none;margin-top:16px;display:grid;gap:7px;font-size:14px;color:#C5D0E0}
+.card li{padding-left:20px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:2px;background:var(--ceu)}
+
+/* Processo */
+.processo{background:var(--noite2)}
+.passos{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:54px;counter-reset:p}
+.passo{padding:28px 24px;border-radius:var(--r);border:1px solid var(--linha);background:rgba(255,255,255,.02);counter-increment:p}
+.passo::before{content:"0" counter(p);font:800 46px Syne,sans-serif;display:block;margin-bottom:14px;background:linear-gradient(180deg,var(--ceu),rgba(107,179,236,.1));-webkit-background-clip:text;background-clip:text;color:transparent}
+.passo p{color:var(--mudo);font-size:14.5px;margin-top:8px}
+
+/* Compromissos */
+.duas{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center}
+.lista{display:grid;gap:14px;margin-top:30px}
+.item{display:flex;gap:16px;padding:18px 20px;border:1px solid var(--linha);border-radius:16px;background:rgba(255,255,255,.02)}
+.item svg{flex:none;width:24px;height:24px;stroke:var(--ceu);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+.item b{display:block;font-size:15.5px}
+.item span{color:var(--mudo);font-size:14.5px}
+.mock{border-radius:24px;border:1px solid var(--linha);background:linear-gradient(160deg,var(--painel),#0A1223);padding:22px;box-shadow:0 40px 110px rgba(0,0,0,.55);position:relative}
+.mock .topo{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-size:12.5px;color:var(--mudo)}
+.mock .topo b{color:#fff;font:700 15px Syne,sans-serif}
+.pontos{display:flex;gap:6px}.pontos i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.18)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kpi{border:1px solid var(--linha);border-radius:14px;padding:14px}
+.kpi small{color:var(--mudo);font-size:11.5px;display:block}
+.kpi .tr{height:8px;border-radius:99px;background:rgba(255,255,255,.08);margin-top:12px;overflow:hidden}
+.kpi .tr i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--azul2),var(--ceu));transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.barras{display:flex;align-items:flex-end;gap:9px;height:150px;margin-top:16px;border:1px solid var(--linha);border-radius:14px;padding:16px}
+.barras i{flex:1;border-radius:7px 7px 3px 3px;background:linear-gradient(180deg,var(--ceu),var(--azul));height:8%;transition:height 1.2s cubic-bezier(.2,.8,.2,1)}
+.mock .rod{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.tag{font-size:12px;font-weight:600;padding:6px 12px;border-radius:99px;background:rgba(38,126,197,.16);color:var(--ceu);border:1px solid rgba(107,179,236,.25)}
+.ilus{position:absolute;right:16px;bottom:-12px;background:var(--noite);border:1px solid var(--linha);border-radius:99px;font-size:11px;color:var(--mudo);padding:3px 11px}
+
+/* Plataformas */
+.plats{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.plat{padding:11px 18px;border-radius:99px;border:1px solid var(--linha);font-weight:600;font-size:14px;background:rgba(255,255,255,.025)}
+.plat.d{border-color:rgba(107,179,236,.45);color:#fff;background:rgba(38,126,197,.14)}
+
+/* Planos (seção clara) */
+.planos{background:var(--claro);color:var(--tinta)}
+.planos .eyebrow{color:var(--azul)}.planos .lead{color:#4A5870}
+.pl{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:54px;align-items:stretch}
+.plano{background:#fff;border:1px solid #DCE4EF;border-radius:var(--r);padding:28px 24px;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.plano:hover{transform:translateY(-6px);box-shadow:0 26px 60px rgba(0,65,141,.14)}
+.plano.top{background:linear-gradient(165deg,var(--azul),#012B60);color:#fff;border-color:transparent;box-shadow:0 26px 70px rgba(0,65,141,.35)}
+.plano small{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--azul2)}
+.plano.top small{color:var(--ceu)}
+.plano h3{font-size:26px;margin:8px 0 6px}
+.plano p{font-size:14.5px;color:#55637A;min-height:66px}
+.plano.top p{color:#C7D8EE}
+.plano ul{list-style:none;display:grid;gap:9px;margin:18px 0 24px;font-size:14.5px;flex:1}
+.plano li{padding-left:24px;position:relative}
+.plano li::before{content:"✓";position:absolute;left:0;font-weight:700;color:var(--azul2)}
+.plano.top li::before{color:var(--ceu)}
+.plano .btn{width:100%;padding:13px}
+.plano .btn.out{border-color:#C9D5E5;color:var(--azul);background:transparent}
+.plano .btn.out:hover{background:var(--azul);color:#fff}
+.plano.top .btn{background:#fff;color:var(--azul)}
+.obs{margin-top:22px;font-size:13.5px;color:#55637A}
+
+/* Guia */
+.guia{background:linear-gradient(160deg,#0C1730,var(--noite))}
+.quiz{max-width:760px;margin:44px auto 0;border:1px solid var(--linha);border-radius:26px;background:rgba(255,255,255,.03);padding:34px}
+.prog{height:5px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden;margin-bottom:26px}
+.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--azul2),var(--ceu));transition:width .4s}
+.quiz h3{font-size:24px;margin-bottom:18px}
+.ops{display:grid;gap:10px}
+.op{text-align:left;padding:16px 18px;border-radius:14px;border:1px solid var(--linha);background:rgba(255,255,255,.02);color:var(--txt);font:600 15px Montserrat,sans-serif;cursor:pointer;transition:border-color .2s,background .2s,transform .2s}
+.op:hover{border-color:var(--ceu);background:rgba(38,126,197,.14);transform:translateX(4px)}
+.res small{color:var(--ceu);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:12px}
+.res h3{font-size:34px;margin:8px 0 10px}
+.res p{color:var(--mudo)}
+.volta{background:none;border:0;color:var(--mudo);font:600 14px Montserrat;cursor:pointer;text-decoration:underline;margin-left:6px}
+
+/* FAQ */
+.faq{max-width:820px;margin:44px auto 0;display:grid;gap:12px}
+details{border:1px solid var(--linha);border-radius:16px;background:rgba(255,255,255,.02);padding:0 22px}
+summary{list-style:none;cursor:pointer;padding:20px 0;font-weight:600;display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 26px Syne;color:var(--ceu);transition:transform .25s;flex:none}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mudo);padding:0 0 22px;font-size:15px}
+
+/* Contato */
+.contato .caixa{border-radius:32px;padding:70px 34px;text-align:center;background:
+  radial-gradient(600px 300px at 50% -10%,rgba(107,179,236,.4),transparent 70%),linear-gradient(150deg,var(--azul),#01275A);border:1px solid rgba(255,255,255,.14);position:relative;overflow:hidden}
+.contato h2{max-width:780px;margin:0 auto}
+.contato p{color:#D3E2F5;max-width:560px;margin:18px auto 0}
+.contato .cta-row{justify-content:center}
+.contato .btn.pri{background:#fff;color:var(--azul);box-shadow:0 14px 40px rgba(0,0,0,.25)}
+.contato .btn.sec{border-color:rgba(255,255,255,.35)}
+#semContato{margin-top:26px;font-size:14px;color:#D3E2F5}
+
+footer{border-top:1px solid var(--linha);padding:44px 0 34px;color:var(--mudo);font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer img{height:26px;width:auto;opacity:.9}
+footer nav{display:flex;gap:22px;flex-wrap:wrap}
+footer a:hover{color:#fff}
+
+/* Aparição */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:1020px){
+  .cards{grid-template-columns:repeat(2,1fr)}.passos,.pl{grid-template-columns:repeat(2,1fr)}
+  .hero .wrap,.duas{grid-template-columns:1fr}.arte{margin:10px auto 0;max-width:380px}
+  .chip.c1{left:0}.chip.c2{right:0}
+}
+@media(max-width:760px){
+  section{padding:76px 0}
+  .nav nav{position:fixed;inset:74px 0 auto 0;flex-direction:column;gap:0;background:rgba(7,13,26,.97);border-bottom:1px solid var(--linha);padding:8px 22px 18px;display:none}
+  .nav nav.aberto{display:flex}.nav nav a{padding:14px 0;border-bottom:1px solid var(--linha);font-size:16px}
+  #burger{display:block}.nav .btn{display:none}
+  .cards,.passos,.pl,.kpis{grid-template-columns:1fr}
+  .hero{padding-top:118px}.quiz{padding:24px 20px}.contato .caixa{padding:52px 22px}
+  .plano p{min-height:0}.btn{width:100%}.cta-row{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="topo">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Vénock, início"><img src="img/logo.png" alt="Vénock" width="114" height="30"></a>
+    <nav id="menu" aria-label="Principal">
+      <a href="#servicos">Serviços</a><a href="#processo">Como funciona</a><a href="#planos">Planos</a><a href="#guia">Qual plano?</a><a href="#faq">Dúvidas</a>
+    </nav>
+    <a class="btn pri" href="#contato">Pedir diagnóstico</a>
+    <button id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow rv">Agência de design e marketing · São Paulo</div>
+      <h1 class="rv" style="--d:.08s">Sua marca merece ser <span class="grad">vista, lembrada e escolhida.</span></h1>
+      <p class="lead rv" style="--d:.16s">Identidade visual, redes sociais, site e anúncios para pequenos e médios negócios. Você aprova cada peça antes de ir ao ar e acompanha os números de perto.</p>
+      <div class="cta-row rv" style="--d:.24s">
+        <a class="btn pri" href="#contato">Pedir um diagnóstico <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn sec" href="#servicos">Ver o que fazemos</a>
+      </div>
+      <div class="selos rv" style="--d:.32s"><span><i></i>Você aprova tudo antes de publicar</span><span><i></i>Números abertos no seu portal</span><span><i></i>Sem promessa milagrosa</span></div>
+    </div>
+    <div class="arte rv" style="--d:.2s" aria-hidden="true">
+      <div class="anel"></div><div class="anel b"></div>
+      <div class="nucleo"><img src="img/simbolo.png" alt="" width="300" height="300"></div>
+      <div class="chip c1"><b></b>Identidade visual</div>
+      <div class="chip c2"><b></b>Tráfego pago</div>
+      <div class="chip c3"><b></b>Social media</div>
+    </div>
+  </div>
+</section>
+
+<div class="faixa" aria-hidden="true"><div class="trilho" id="trilho">
+  <span>Identidade visual</span><span>Social media</span><span>Tráfego pago</span><span>Sites e landing pages</span><span>Marketing de conteúdo</span><span>Vídeo para redes</span>
+</div></div>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="eyebrow rv">O que fazemos</div>
+    <h2 class="rv">Do logotipo ao anúncio,<br>uma equipe só.</h2>
+    <p class="lead rv">Cada serviço funciona sozinho. Juntos, eles fazem a mesma marca aparecer do mesmo jeito em todo lugar onde o seu cliente procura.</p>
+    <div class="cards">
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg></div><h3>Identidade visual</h3><p>A cara do seu negócio, pensada para ser reconhecida em segundos.</p><ul><li>Logotipo e variações</li><li>Cores e tipografia</li><li>Aplicações: fachada, embalagem e redes</li></ul></article>
+      <article class="card rv" style="--d:.08s"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></div><h3>Social media</h3><p>Presença constante, com linha editorial e visual próprios.</p><ul><li>Calendário mensal de conteúdo</li><li>Artes, roteiros e legendas</li><li>Aprovação sua antes de cada post</li></ul></article>
+      <article class="card rv" style="--d:.16s"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div><h3>Tráfego pago</h3><p>Anúncios nas plataformas onde o seu cliente realmente está.</p><ul><li>Meta, Google e outras plataformas</li><li>Estrutura, criativos e textos</li><li>Acompanhamento semanal</li></ul></article>
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2.5"/><path d="M3 9h18M8 21h8M12 18v3"/></svg></div><h3>Sites e landing pages</h3><p>Páginas rápidas, feitas para o celular e para gerar contato.</p><ul><li>Estrutura e texto de venda</li><li>SEO local e Google Perfil</li><li>Rastreamento de conversões</li></ul></article>
+      <article class="card rv" style="--d:.08s"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 10h16M4 15h10M4 20h7"/></svg></div><h3>Marketing de conteúdo</h3><p>Textos que respondem o que o seu cliente pesquisa.</p><ul><li>Pautas e pilares de conteúdo</li><li>Blog e e-mail</li><li>Copy de anúncios e páginas</li></ul></article>
+      <article class="card rv" style="--d:.16s"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="13" height="14" rx="3"/><path d="M16 10l5-3v10l-5-3z"/></svg></div><h3>Vídeo para redes</h3><p>Do roteiro de gravação no celular ao vídeo pronto para postar.</p><ul><li>Plano de captação</li><li>Cortes verticais e legendas</li><li>Capas no padrão da marca</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="processo" id="processo">
+  <div class="wrap">
+    <div class="eyebrow rv">Como funciona</div>
+    <h2 class="rv">Quatro passos, sem surpresa.</h2>
+    <div class="passos">
+      <div class="passo rv"><h3>Diagnóstico</h3><p>Olhamos como o seu negócio aparece hoje no Google e nas redes e mostramos o que dá para melhorar.</p></div>
+      <div class="passo rv" style="--d:.08s"><h3>Plano</h3><p>Você recebe uma proposta clara: o que será feito, em qual prazo e por qual valor.</p></div>
+      <div class="passo rv" style="--d:.16s"><h3>Produção</h3><p>Criamos as peças e você aprova uma a uma. Se reprovar, o motivo vira regra para as próximas.</p></div>
+      <div class="passo rv" style="--d:.24s"><h3>Resultados</h3><p>Relatório mensal em linguagem simples e os números das campanhas no seu portal.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="compromissos">
+  <div class="wrap duas">
+    <div>
+      <div class="eyebrow rv">Nossos compromissos</div>
+      <h2 class="rv">Transparência não é diferencial. <span class="grad">É o combinado.</span></h2>
+      <div class="lista">
+        <div class="item rv"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><div><b>Nada vai ao ar sem a sua aprovação</b><span>Arte, legenda, anúncio e relatório passam por você primeiro.</span></div></div>
+        <div class="item rv" style="--d:.08s"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg><div><b>Portal do cliente</b><span>Cliques, contatos e campanhas ativas, para você consultar quando quiser.</span></div></div>
+        <div class="item rv" style="--d:.16s"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><div><b>Sem promessa de resultado garantido</b><span>Marketing sério trabalha com teste, número e ajuste, não com milagre.</span></div></div>
+        <div class="item rv" style="--d:.24s"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg><div><b>Contrato claro e dados protegidos</b><span>Escopo e prazos por escrito, e seus dados tratados conforme a LGPD.</span></div></div>
+      </div>
+    </div>
+    <div class="mock rv" id="mock" aria-hidden="true">
+      <div class="topo"><b>Portal do cliente</b><div class="pontos"><i></i><i></i><i></i></div></div>
+      <div class="kpis">
+        <div class="kpi"><small>Alcance</small><div class="tr"><i data-w="82"></i></div></div>
+        <div class="kpi"><small>Cliques</small><div class="tr"><i data-w="64"></i></div></div>
+        <div class="kpi"><small>Contatos</small><div class="tr"><i data-w="47"></i></div></div>
+      </div>
+      <div class="barras"><i data-h="34"></i><i data-h="48"></i><i data-h="41"></i><i data-h="62"></i><i data-h="55"></i><i data-h="74"></i><i data-h="68"></i><i data-h="88"></i></div>
+      <div class="rod"><span class="tag">Campanha ativa</span><span class="tag">Relatório do mês</span><span class="tag">Posts para aprovar</span></div>
+      <span class="ilus">imagem ilustrativa</span>
+    </div>
+  </div>
+</section>
+
+<section class="processo" id="plataformas">
+  <div class="wrap">
+    <div class="eyebrow rv">Tráfego pago sob medida</div>
+    <h2 class="rv">A plataforma certa depende<br>do seu cliente, não da moda.</h2>
+    <p class="lead rv">Arquiteto vende pelo Pinterest. Restaurante, pelo iFood. Comércio de bairro, pelo Google e pelo Instagram. Escolhemos junto com você onde investir.</p>
+    <div class="plats rv">
+      <span class="plat d">Meta Ads (Instagram e Facebook)</span><span class="plat d">Google Ads</span><span class="plat">Pinterest Ads</span><span class="plat">TikTok Ads</span><span class="plat">YouTube Ads</span><span class="plat">LinkedIn Ads</span><span class="plat">iFood Ads</span><span class="plat">Shopee Ads</span><span class="plat">Mercado Livre Ads</span>
+    </div>
+  </div>
+</section>
+
+<section class="planos" id="planos">
+  <div class="wrap">
+    <div class="eyebrow rv">Planos</div>
+    <h2 class="rv">Comece pelo que faz sentido agora.</h2>
+    <p class="lead rv">Três planos mensais e um projeto de marca. O valor é definido na proposta, depois do diagnóstico do seu negócio.</p>
+    <div class="pl">
+      <div class="plano rv"><small>Projeto único</small><h3>Identidade visual</h3><p>Para quem está começando ou quer renovar a marca.</p><ul><li>Logotipo e variações</li><li>Paleta e tipografia</li><li>Aplicações principais</li><li>Arquivos finais organizados</li></ul><a class="btn out" href="#contato" data-plano="Identidade visual">Quero este</a></div>
+      <div class="plano rv" style="--d:.08s"><small>Mensal</small><h3>Essencial</h3><p>Para manter as redes vivas, com padrão e constância.</p><ul><li>Social media</li><li>Calendário mensal</li><li>Artes e legendas</li><li>Aprovação antes de publicar</li></ul><a class="btn out" href="#contato" data-plano="Essencial">Quero este</a></div>
+      <div class="plano top rv" style="--d:.16s"><small>Mensal · foco em vendas</small><h3>Performance</h3><p>Redes ativas e anúncios trazendo contatos.</p><ul><li>Tudo do Essencial</li><li>Tráfego pago</li><li>Criativos e textos de anúncio</li><li>Números no portal do cliente</li></ul><a class="btn" href="#contato" data-plano="Performance">Quero este</a></div>
+      <div class="plano rv" style="--d:.24s"><small>Mensal</small><h3>Completo</h3><p>Para quem quer a presença digital inteira resolvida.</p><ul><li>Tudo do Performance</li><li>Site ou landing page</li><li>Marketing de conteúdo</li><li>Relatório mensal detalhado</li></ul><a class="btn out" href="#contato" data-plano="Completo">Quero este</a></div>
+    </div>
+    <p class="obs rv">A verba de anúncios é paga direto às plataformas e não está incluída nos planos.</p>
+  </div>
+</section>
+
+<section class="guia" id="guia">
+  <div class="wrap">
+    <div style="text-align:center"><div class="eyebrow rv">Guia rápido</div><h2 class="rv">Qual plano combina com você?</h2><p class="lead rv" style="margin-inline:auto">Três perguntas, menos de um minuto. Nenhum dado seu é coletado.</p></div>
+    <div class="quiz rv" id="quiz" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div style="text-align:center"><div class="eyebrow rv">Dúvidas frequentes</div><h2 class="rv">Antes de você perguntar.</h2></div>
+    <div class="faq">
+      <details class="rv"><summary>Vocês garantem resultado?</summary><p>Não, e desconfie de quem garante. O que garantimos é método: testar, medir e ajustar, com os números abertos para você acompanhar.</p></details>
+      <details class="rv"><summary>A verba de anúncio está incluída no plano?</summary><p>Não. O plano cobre o nosso trabalho. A verba de mídia é definida com você e paga direto à plataforma (Meta, Google e outras).</p></details>
+      <details class="rv"><summary>Preciso aprovar tudo?</summary><p>Sim. Nenhuma arte, legenda ou anúncio vai ao ar sem o seu ok. Quando algo é reprovado, anotamos o motivo para não repetir.</p></details>
+      <details class="rv"><summary>Como acompanho os resultados?</summary><p>Você recebe um relatório mensal em linguagem simples e tem acesso a um portal com os números das campanhas que estão rodando.</p></details>
+      <details class="rv"><summary>Atendem que tipo de negócio?</summary><p>Pequenos e médios negócios, principalmente de São Paulo: comércio de bairro, alimentação, serviços, saúde, estética e profissionais liberais.</p></details>
+      <details class="rv"><summary>Ainda não tenho logotipo. Por onde começo?</summary><p>Pela identidade visual. Com a marca definida, redes, site e anúncios ficam coerentes e rendem mais.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="wrap">
+    <div class="caixa rv">
+      <h2>Vamos olhar o seu negócio juntos?</h2>
+      <p id="ctaTxt">Peça um diagnóstico da sua presença digital. Mostramos o que encontramos e o que faríamos primeiro.</p>
+      <div class="cta-row" id="canais"></div>
+      <p id="semContato" hidden>Nossos canais de contato estarão disponíveis aqui em breve.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo.png" alt="Vénock" width="99" height="26">
+    <nav aria-label="Rodapé"><a href="#servicos">Serviços</a><a href="#planos">Planos</a><a href="#faq">Dúvidas</a><a href="#contato">Contato</a></nav>
+    <span>© <span id="ano"></span> Vénock · São Paulo, SP · Este site não usa cookies de rastreamento.</span>
+  </div>
+</footer>
+
+<script>
+/* Canais públicos de contato. Preencha só o que pode aparecer no site. */
+var CONTATO = { whatsapp: '5511963678580', email: 'contato.venock@gmail.com', instagram: 'venock.oficial' };
+
+(function () {
+  var $ = function (s) { return document.querySelector(s); };
+  var plano = '';
+  $('#ano').textContent = new Date().getFullYear();
+
+  /* Navegação */
+  var topo = $('#topo'), menu = $('#menu'), burger = $('#burger');
+  var aoRolar = function () { topo.classList.toggle('on', scrollY > 24); };
+  addEventListener('scroll', aoRolar, { passive: true }); aoRolar();
+  burger.addEventListener('click', function () {
+    var a = menu.classList.toggle('aberto'); burger.setAttribute('aria-expanded', a); burger.textContent = a ? '✕' : '☰';
+  });
+  menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') { menu.classList.remove('aberto'); burger.setAttribute('aria-expanded', false); burger.textContent = '☰'; } });
+
+  /* Faixa contínua */
+  var t = $('#trilho'); t.innerHTML += t.innerHTML;
+
+  /* Aparição ao rolar */
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in');
+      if (e.target.id === 'mock') {
+        e.target.querySelectorAll('[data-w]').forEach(function (i) { i.style.width = i.dataset.w + '%'; });
+        e.target.querySelectorAll('[data-h]').forEach(function (i, n) { setTimeout(function () { i.style.height = i.dataset.h + '%'; }, n * 70); });
+      }
+      io.unobserve(e.target);
+    });
+  }, { threshold: .14 });
+  document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+  /* Brilho que segue o mouse nos cartões */
+  document.querySelectorAll('.card').forEach(function (c) {
+    c.addEventListener('pointermove', function (e) {
+      var r = c.getBoundingClientRect();
+      c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+  });
+
+  /* Contato */
+  function mensagem() { return 'Olá! Vim pelo site da Vénock e quero um diagnóstico' + (plano ? ' (interesse no plano ' + plano + ')' : '') + '.'; }
+  function canais() {
+    var h = '', m = encodeURIComponent(mensagem()), w = CONTATO.whatsapp.replace(/\D/g, '');
+    if (w) h += '<a class="btn pri" target="_blank" rel="noopener" href="https://wa.me/' + w + '?text=' + m + '">Chamar no WhatsApp</a>';
+    if (CONTATO.email) h += '<a class="btn ' + (w ? 'sec' : 'pri') + '" href="mailto:' + CONTATO.email + '?subject=' + encodeURIComponent('Diagnóstico Vénock') + '&body=' + m + '">Enviar e-mail</a>';
+    if (CONTATO.instagram) h += '<a class="btn sec" target="_blank" rel="noopener" href="https://instagram.com/' + CONTATO.instagram.replace('@', '') + '">Instagram</a>';
+    $('#canais').innerHTML = h; $('#semContato').hidden = !!h;
+  }
+  canais();
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-plano]'); if (!b) return;
+    plano = b.dataset.plano; canais();
+    $('#ctaTxt').textContent = 'Ótima escolha: ' + plano + '. Fale com a gente e montamos a proposta para o seu negócio.';
+  });
+
+  /* Guia de planos */
+  var P = [
+    { q: 'O que você mais precisa agora?', o: [['Criar ou renovar a minha marca', 'marca'], ['Manter as redes sociais ativas', 'redes'], ['Receber mais contatos e vendas', 'vendas'], ['Resolver tudo de uma vez', 'tudo']] },
+    { q: 'Seu negócio já tem logotipo e identidade definidos?', o: [['Sim, já tenho', 'sim'], ['Ainda não, ou quero refazer', 'nao']] },
+    { q: 'Pretende investir em anúncios?', o: [['Sim', 'sim'], ['Ainda não', 'nao'], ['Não sei, quero orientação', 'talvez']] }
+  ];
+  var TXT = {
+    'Identidade visual': 'Comece pela marca. Com ela definida, tudo o que vier depois fica coerente.',
+    'Essencial': 'Redes sociais com calendário, padrão visual e a sua aprovação em cada post.',
+    'Performance': 'Redes ativas e anúncios trabalhando juntos para trazer contatos.',
+    'Completo': 'Presença digital inteira: redes, anúncios, site e conteúdo.'
+  };
+  var quiz = $('#quiz'), r = [];
+  function recomenda() {
+    var base = { marca: 'Identidade visual', redes: 'Essencial', vendas: 'Performance', tudo: 'Completo' }[r[0]];
+    if (base === 'Essencial' && r[2] === 'sim') base = 'Performance';
+    var extra = (r[1] === 'nao' && base !== 'Identidade visual') ? ' Como a marca ainda não está definida, vale começar pela Identidade visual.' : '';
+    if (r[2] === 'talvez' && base !== 'Identidade visual') extra += ' No diagnóstico, mostramos se anúncio faz sentido para você agora.';
+    return { nome: base, texto: TXT[base] + extra };
+  }
+  function tela() {
+    var i = r.length, h = '<div class="prog"><i style="width:' + (i / P.length * 100) + '%"></i></div>';
+    if (i < P.length) {
+      h += '<h3>' + (i + 1) + '. ' + P[i].q + '</h3><div class="ops">' + P[i].o.map(function (o) { return '<button class="op" data-v="' + o[1] + '">' + o[0] + '</button>'; }).join('') + '</div>';
+    } else {
+      var x = recomenda();
+      h += '<div class="res"><small>Nossa sugestão</small><h3 class="grad">' + x.nome + '</h3><p>' + x.texto + '</p><div class="cta-row"><a class="btn pri" href="#contato" data-plano="' + x.nome + '">Quero uma proposta</a><button class="volta" id="refazer">Refazer</button></div></div>';
+    }
+    quiz.innerHTML = h;
+  }
+  quiz.addEventListener('click', function (e) {
+    var o = e.target.closest('.op'); if (o) { r.push(o.dataset.v); tela(); return; }
+    if (e.target.id === 'refazer') { r = []; tela(); }
+  });
+  tela();
+})();
+</script>
+</body>
+</html>
