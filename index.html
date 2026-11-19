@@ -249,6 +249,15 @@ footer a:hover{color:#fff}
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}
 }
+.orc{margin-top:26px;text-align:left;border-top:1px solid var(--linha);padding-top:22px}
+.orc-t{font-weight:600;margin-bottom:12px}
+.orc-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.orc label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--mudo)}
+.orc input,.orc select{font:inherit;color:var(--txt);background:var(--noite2);border:1px solid var(--linha);border-radius:12px;padding:11px 12px}
+.orc input:focus,.orc select:focus{outline:2px solid var(--azul2);outline-offset:1px}
+.orc fieldset{border:0;margin:14px 0;display:flex;flex-wrap:wrap;gap:10px}.orc legend{font-size:13px;color:var(--mudo);margin-bottom:8px}
+.orc .chk{flex-direction:row;align-items:center;gap:8px;background:var(--noite2);border:1px solid var(--linha);border-radius:999px;padding:8px 14px;color:var(--txt);cursor:pointer}
+.orc small{display:block;margin-top:10px;color:var(--mudo);font-size:12px}
 </style>
 </head>
 <body>
@@ -418,6 +427,22 @@ footer a:hover{color:#fff}
       <h2>Vamos olhar o seu negócio juntos?</h2>
       <p id="ctaTxt">Peça um diagnóstico da sua presença digital. Mostramos o que encontramos e o que faríamos primeiro.</p>
       <div class="cta-row" id="canais"></div>
+      <form id="orc" class="orc" autocomplete="on" novalidate>
+        <p class="orc-t">Orçamento rápido: responda 4 coisas e a mensagem vai pronta para o nosso WhatsApp.</p>
+        <div class="orc-g">
+          <label>Nome do negócio<input name="negocio" maxlength="80" required placeholder="Ex.: Padaria do Bairro"></label>
+          <label>Segmento<select name="segmento"><option>Alimentação</option><option>Beleza e estética</option><option>Pet</option><option>Moda e varejo</option><option>Saúde</option><option>Serviços</option><option>Artesanato</option><option>Outro</option></select></label>
+          <label>Bairro / cidade<input name="local" maxlength="60" placeholder="Ex.: Mooca, São Paulo"></label>
+        </div>
+        <fieldset><legend>O que você precisa?</legend>
+          <label class="chk"><input type="checkbox" name="precisa" value="Identidade visual">Identidade visual</label>
+          <label class="chk"><input type="checkbox" name="precisa" value="Social media">Social media</label>
+          <label class="chk"><input type="checkbox" name="precisa" value="Site">Site</label>
+          <label class="chk"><input type="checkbox" name="precisa" value="Tráfego pago">Tráfego pago</label>
+        </fieldset>
+        <button class="btn pri" type="submit">Montar mensagem no WhatsApp</button>
+        <small>Nada fica salvo neste site: o texto só é montado no seu celular e enviado por você.</small>
+      </form>
       <p id="semContato" hidden>Nossos canais de contato estarão disponíveis aqui em breve.</p>
     </div>
   </div>
@@ -500,6 +525,17 @@ var CONTATO = { whatsapp: '5511963678580', email: 'contato.venock@gmail.com', in
     $('#canais').innerHTML = h; $('#semContato').hidden = !!h;
   }
   canais();
+  /* Orçamento rápido: monta a mensagem e abre o WhatsApp. Nada é salvo nem enviado pelo site. */
+  var orc = document.getElementById('orc');
+  if (orc) orc.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = new FormData(orc), neg = String(f.get('negocio') || '').trim();
+    if (!neg) { orc.negocio.focus(); return; }
+    var pre = f.getAll('precisa').join(', ') || 'ainda não sei, quero um diagnóstico';
+    var txt = 'Olá, Vénock! Quero um orçamento.'+'\n• Negócio: ' + neg + '\n• Segmento: ' + f.get('segmento') + (f.get('local') ? '\n• Local: ' + f.get('local') : '') + '\n• Preciso de: ' + pre + (plano ? '\n• Plano de interesse: ' + plano : '');
+    var w = CONTATO.whatsapp.replace(/\D/g, '');
+    window.open('https://wa.me/' + w + '?text=' + encodeURIComponent(txt), '_blank', 'noopener');
+  });
   document.addEventListener('click', function (e) {
     var b = e.target.closest('[data-plano]'); if (!b) return;
     plano = b.dataset.plano; canais();
