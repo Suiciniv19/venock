@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://suiciniv19.github.io/venock/sitemap.xml
